@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please provide your password"],
     minLength: [8, "Password must contains at least 8 characters !"],
-    maxLength: [32, "Password cannot exceed 30 characters !"],
+    maxLength: [32, "Password cannot exceed 32 characters !"],
   },
   role:{
     type: String,
@@ -39,8 +39,8 @@ const userSchema = new mongoose.Schema({
 
 //hashing the pass
 userSchema.pre("save", async function(next){
-    if(this.isModified("password")){
-        next()
+    if(!this.isModified("password")){
+        next();
     }
     this.password = await bcrypt.hash(this.password,10);
 })
@@ -50,9 +50,11 @@ userSchema.methods.comparePassword = async function(enteredPassword){
   return await bcrypt.compare(enteredPassword,this.password);
 };
 
-//jwt generation for aurthorix=zation
+//jwt generation for aurthorization
 userSchema.methods.getJWTToken = function(){
   return jwt.sign({ id: this._id }, process.env.JWT_SECRET_KEY, {
     expiresIn: process.env.JWT_EXPIRE,
   });
 }
+
+export const User = mongoose.model("User", userSchema);
