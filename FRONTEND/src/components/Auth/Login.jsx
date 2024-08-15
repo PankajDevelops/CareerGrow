@@ -66,7 +66,11 @@ const Login = () => {
               <div>
                 <input
                   type="email"
+<<<<<<< HEAD
                   placeholder="xyz@gmail.com"
+=======
+                  placeholder="zk@gmail.com"
+>>>>>>> 7442854bf2070f4b8f4786db868ef2682e49247a
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
