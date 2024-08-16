@@ -73,11 +73,7 @@ const Register = () => {
               <div>
                 <input
                   type="text"
-<<<<<<< HEAD
-                  placeholder="Your Full Name"
-=======
                   placeholder="Zeeshan"
->>>>>>> 7442854bf2070f4b8f4786db868ef2682e49247a
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
@@ -89,11 +85,7 @@ const Register = () => {
               <div>
                 <input
                   type="email"
-<<<<<<< HEAD
-                  placeholder="xyz@gmail.com"
-=======
                   placeholder="zk@gmail.com"
->>>>>>> 7442854bf2070f4b8f4786db868ef2682e49247a
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -105,11 +97,7 @@ const Register = () => {
               <div>
                 <input
                   type="number"
-<<<<<<< HEAD
-                  placeholder="+91 0123456789"
-=======
                   placeholder="12345678"
->>>>>>> 7442854bf2070f4b8f4786db868ef2682e49247a
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                 />
