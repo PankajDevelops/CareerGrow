@@ -1173,11 +1173,12 @@ nav .container {
   justify-content: space-between;
 }
 nav .container .logo {
-  width: 120px;
-  height: 120px;
+  margin-top: 10px;
+  width: 300px;
+  height: 70px;
 }
 nav .container .logo img {
-  width: 100%;
+  width: 50%;
   height: 100%;
 }
 nav .menu {
