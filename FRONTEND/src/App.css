@@ -180,10 +180,12 @@ p {
   align-items: center;
   overflow-y: hidden;
 }
-.authPage .banner img {
+.authPage .banner iframe {
   width: 100%;
   width: 550px;
   height: 550px;
+  border: none;
+  z-index: 0;
 }
 @media (max-width: 1520px) {
   .authPage {

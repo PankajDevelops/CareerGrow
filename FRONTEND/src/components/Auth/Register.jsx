@@ -8,6 +8,7 @@ import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Context } from "../../main";
+import AnimatedText from "./AnimatedText";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -123,7 +124,8 @@ const Register = () => {
           </form>
         </div>
         <div className="banner">
-          <img src="/register.png" alt="login" />
+          <AnimatedText />
+          {/* <img src="/register.png" alt="login" /> */}
         </div>
       </section>
     </>
