@@ -6,6 +6,7 @@ import { FaRegUser } from "react-icons/fa";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Context } from "../../main";
+import AnimatedText from "./AnimatedText";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -66,7 +67,7 @@ const Login = () => {
               <div>
                 <input
                   type="email"
-                  placeholder="zk@gmail.com"
+                  placeholder="abc@email.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -92,7 +93,8 @@ const Login = () => {
           </form>
         </div>
         <div className="banner">
-          <img src="/login.png" alt="login" />
+          <AnimatedText />
+          {/* <img src="/login.png" alt="login" /> */}
         </div>
       </section>
     </>
