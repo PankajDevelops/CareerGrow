@@ -34,6 +34,10 @@ app.use("/api/v1/user", userRouter);
 app.use("/api/v1/job", jobRouter);
 app.use("/api/v1/application", applicationRouter);
 dbConnection();
-
+//----------------------------
+app.get("/", (req, res) => {
+  res.status(200).send("Backend server is up and running");
+});
+//---------------------------
 app.use(errorMiddleware);
 export default app;
