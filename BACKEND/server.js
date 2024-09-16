@@ -12,7 +12,7 @@ app.listen(process.env.PORT, ()=>{
 });
 
 //---------------------for render reloading-------------------
-const axios = require('axios'); 
+import axios from "axios"; 
 const url = `https://careersgrow.onrender.com`; 
 const interval = 30000; // Interval in milliseconds (30 seconds)
 
